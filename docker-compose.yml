@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   postgresqltest:
-    image: ${DOCKER_REGISTRY} dipakrn/mypoc:latest
+    image: dipakrn/mypoc:latest
     build:
       context: .
       dockerfile: PostgreSQLTest/Dockerfile
