@@ -4,13 +4,13 @@ phases:
     commands:
       - echo Using tooling dotnet version `dotnet --version`
       - echo Restore started on `date`
-      - dotnet restore PostgreSQLTest/PostgreSQLTest.csproj
+      - dotnet restore tree/master/PostgreSQLTest/PostgreSQLTest.csproj
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c Release -o ./build_output PostgreSQLTest/PostgreSQLTest.csproj
+      - dotnet publish -c Release -o ./build_output tree/master/PostgreSQLTest/PostgreSQLTest.csproj
 artifacts:
   files:
-    - PostgreSQLTest/build_output/**/*
+    - tree/master/PostgreSQLTest/PostgreSQLTest/build_output/**/*
     - scripts/**/*
  
