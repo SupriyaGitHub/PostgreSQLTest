@@ -1,9 +1,7 @@
 version: 0.2
-phases:
-  build:
-    commands:
-      - echo Build started on `date`
-      - dotnet publish -c Release -o ./build_output PostgreSQLTest.csproj
-artifacts:
-  files:
-    - PostgreSQLTest/build_output/**/*
+services:
+  postgresqltest:
+    image: ${DOCKER_REGISTRY} postgresqltest
+    build:
+      context: .
+      dockerfile: PostgreSQLTest/Dockerfile
