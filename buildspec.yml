@@ -1,16 +1,9 @@
 version: 0.2
 phases:
-  pre_build:
-    commands:
-      - echo Using tooling dotnet version `dotnet --version`
-      - echo Restore started on `date`
-      - dotnet restore tree/master/PostgreSQLTest/PostgreSQLTest.csproj
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c Release -o ./build_output tree/master/PostgreSQLTest/PostgreSQLTest.csproj
+      - dotnet publish -c Release -o ./build_output PostgreSQLTest.csproj
 artifacts:
   files:
-    - tree/master/PostgreSQLTest/PostgreSQLTest/build_output/**/*
-    - scripts/**/*
- 
+    - PostgreSQLTest/build_output/**/*
