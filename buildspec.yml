@@ -1,7 +1,7 @@
 version: 0.2
-services:
-  postgresqltest:
-    image: ${DOCKER_REGISTRY} postgresqltest
-    build:
-      context: .
-      dockerfile: PostgreSQLTest/Dockerfile
+
+phases:
+   build:
+    commands: 
+        -docker-compose
+      
