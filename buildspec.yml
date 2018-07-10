@@ -11,7 +11,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...        
-      - docker build -t fcdsrepository ./postgresqltest/dockerfile 
+      - cat docker-compose.yml
+      - docker-compose up      
       - docker tag fcdsrepository $REPOSITORY_URI:latest
   post_build:
     commands:
