@@ -11,13 +11,13 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t postgresqltest .
-      - docker tag postgresqltest $REPOSITORY_URI:latest
+      - docker build -t fcdsrepository .
+      - docker tag fcdsrepository $REPOSITORY_URI:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:fcdsrepository
  
       
       
