@@ -1,7 +1,6 @@
 services:
-  postgresqltest:
-    image: ${REPOSITORY_URI} postgresqltest
-    build:
-      context: .
-      dockerfile: PostgreSQLTest/Dockerfile
- 
++  postgresqltest:
++    image: ${DOCKER_REGISTRY} postgresqltest
++    build:
++      context: .
++      dockerfile: PostgreSQLTest/Dockerfile
