@@ -1,3 +1,4 @@
+version: 0.2
 services:
 +  postgresqltest:
 +    image: ${DOCKER_REGISTRY} postgresqltest
