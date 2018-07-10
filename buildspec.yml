@@ -10,8 +10,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo Building the Docker image...          
-      - docker build -t fcdsrepository .
+      - echo Building the Docker image...        
+      - docker build -t fcdsrepository https://github.com/SupriyaGitHub/PostgreSQLTest#master:PostgreSQLTest
       - docker tag fcdsrepository $REPOSITORY_URI:latest
   post_build:
     commands:
